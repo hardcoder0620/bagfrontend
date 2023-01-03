@@ -1,0 +1,324 @@
+header {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+header .navBar {
+  background: white;
+}
+header .navBar .navList .nav-link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+}
+header .navBar .navList .nav-link:hover {
+  color: #F47B20;
+}
+header .navBar .likeCartPro {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+header .navBar .likeCartPro .iconBox {
+  position: relative;
+}
+header .navBar .likeCartPro .iconBox span {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  height: 18px;
+  width: 18px;
+  background: #F47B20;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.topSlider .swiper-pagination {
+  scale: 1.4;
+  padding-bottom: 20px;
+}
+.topSlider .swiper-pagination .swiper-pagination-bullet {
+  background: #F47B20;
+}
+
+.shopTopCatDiv {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  background: white;
+}
+.shopTopCatDiv .head {
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+}
+.shopTopCatDiv .catCarousel {
+  padding-top: 112px;
+  position: relative;
+}
+.shopTopCatDiv .catCarousel .catName {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000000;
+}
+.shopTopCatDiv .catCarousel .navBtns {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+.shopTopCatDiv .catCarousel .navBtns .navBtn {
+  height: 35px;
+  width: 35px;
+  display: grid;
+  place-items: center;
+  background: black;
+  font-size: 24px;
+  cursor: pointer;
+}
+.shopTopCatDiv .catCarousel .navBtns .navBtn .iconn {
+  color: white;
+}
+.shopTopCatDiv .catCarousel .navBtns .navBtn.swiper-button-disabled {
+  background: grey;
+}
+
+.allProductsMain {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.allProductsMain .catDiv {
+  margin-top: 25px;
+}
+.allProductsMain .catDiv .head {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #D1D1D1;
+}
+.allProductsMain .catDiv .options .option {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.allProductsMain .catDiv .options .option .text {
+  flex: 1;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+}
+.allProductsMain .catDiv .options .option .icoBox {
+  height: 20px;
+  width: 20px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(165, 165, 165);
+  font-size: 14px;
+}
+.allProductsMain .companyDiv {
+  margin-top: 20px;
+}
+.allProductsMain .companyDiv .head {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  padding-bottom: 13px;
+}
+.allProductsMain .companyDiv select {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #D1D1D1;
+  outline: none;
+}
+.allProductsMain .companyDiv select option {
+  padding: 5px 10px;
+  background: #F47B20;
+  color: white;
+}
+.allProductsMain .priceDiv {
+  margin-top: 20px;
+}
+.allProductsMain .priceDiv .head {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  padding-bottom: 13px;
+}
+.allProductsMain .priceDiv .value {
+  font-weight: 300;
+  font-size: 20px;
+}
+.allProductsMain .priceDiv input {
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  accent-color: #F47B20;
+  scale: 1;
+  transition: all 0.3s;
+}
+.allProductsMain .priceDiv input:hover {
+  scale: 1.1;
+}
+.allProductsMain .clearDiv {
+  margin-top: 40px;
+}
+.allProductsMain .clearDiv .clrBtn {
+  border: none;
+  width: 180px;
+  background: #F47B20;
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 9px;
+  display: block;
+  margin: auto;
+  scale: 1;
+  transition: all 0.2s;
+}
+.allProductsMain .clearDiv .clrBtn:hover {
+  background: black;
+  color: white;
+  scale: 1.2;
+}
+.allProductsMain .vievDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.allProductsMain .vievDiv .viewOpts {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+.allProductsMain .vievDiv .viewOpts .box {
+  height: 26px;
+  width: 26px;
+  background: rgb(202, 202, 202);
+  display: grid;
+  place-items: center;
+  color: white;
+  transition: all 0.3s;
+}
+.allProductsMain .vievDiv .viewOpts .box.active {
+  background: black;
+}
+.allProductsMain .vievDiv select {
+  outline: none;
+  padding: 5px 10px;
+  border: 1px solid rgb(189, 189, 189);
+}
+.allProductsMain .vievDiv select option {
+  background: #F47B20;
+  color: white;
+}
+.allProductsMain .productsDiv {
+  padding-top: 30px;
+}
+.allProductsMain .productsDiv .product .imgBox {
+  border: 1px solid #D1D1D1;
+  padding: 33px 11px 11px 11px;
+  position: relative;
+}
+.allProductsMain .productsDiv .product .imgBox .productImg {
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.allProductsMain .productsDiv .product .imgBox .likeDivb {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  cursor: pointer;
+  color: #F47B20;
+}
+.allProductsMain .productsDiv .product .proName {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  margin-top: 14px;
+}
+.allProductsMain .productsDiv .product .price {
+  margin-top: 13px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000000;
+}
+.allProductsMain .productsDiv .productListView {
+  display: flex;
+  align-items: flex-start;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.allProductsMain .productsDiv .productListView .imgBox {
+  border: 1px solid #D1D1D1;
+  padding: 33px 11px 11px 11px;
+  position: relative;
+}
+.allProductsMain .productsDiv .productListView .imgBox .productImg {
+  width: 200px;
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.allProductsMain .productsDiv .productListView .imgBox .likeDivb {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  cursor: pointer;
+  color: #F47B20;
+}
+.allProductsMain .productsDiv .productListView .content {
+  flex: 1;
+}
+.allProductsMain .productsDiv .productListView .content .proName {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  margin-top: 14px;
+}
+.allProductsMain .productsDiv .productListView .content .price {
+  margin-top: 13px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.catSticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+}/*# sourceMappingURL=home.css.map */

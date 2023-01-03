@@ -1,0 +1,404 @@
+// variablles
+$primary : #F47B20;
+// header css here 
+
+header {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    ;
+
+    .navBar {
+        background: white;
+
+        .navList {
+            .nav-link {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 22px;
+                color: #000000;
+
+                &:hover {
+                    color: $primary;
+                }
+
+                &.active {
+                    // color: $primary;
+
+
+                }
+            }
+        }
+
+        .likeCartPro {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+
+            .iconBox {
+                position: relative;
+
+                span {
+                    position: absolute;
+                    top: -25px;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                    height: 18px;
+                    width: 18px;
+                    background: $primary;
+                    border-radius: 50%;
+                    display: grid;
+                    place-items: center;
+                    color: white;
+                    font-weight: 600;
+                    font-size: 12px;
+                }
+            }
+        }
+
+    }
+}
+
+
+// .topSlider
+.topSlider {
+
+    .swiper-pagination {
+        scale: 1.4;
+        padding-bottom: 20px;
+
+        .swiper-pagination-bullet {
+            background: $primary;
+        }
+    }
+}
+
+// .shopTopCatDiv
+.shopTopCatDiv {
+    padding-top: 100px;
+    padding-bottom: 120px;
+    background: white;
+
+    .head {
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        color: #000000;
+        font-size: 24px;
+
+    }
+
+    .catCarousel {
+        padding-top: 112px;
+        position: relative;
+
+
+        .catName {
+            margin-top: 20px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 30px;
+            color: #000000;
+        }
+
+        .navBtns {
+            display: flex;
+            position: absolute;
+            top: 30px;
+            right: 0px;
+            column-gap: 15px;
+
+            .navBtn {
+                height: 35px;
+                width: 35px;
+                display: grid;
+                place-items: center;
+                background: black;
+                font-size: 24px;
+                cursor: pointer;
+
+                .iconn {
+                    color: white;
+                }
+
+                &.swiper-button-disabled {
+                    background: grey;
+                }
+            }
+        }
+    }
+}
+
+
+// allProductsMain
+.allProductsMain {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .catDiv {
+        margin-top: 25px;
+
+        .head {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+            padding-bottom: 13px;
+            border-bottom: 1px solid #D1D1D1;
+        }
+
+        .options {
+
+            .option {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+
+                .text {
+                    flex: 1;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: #000000;
+                }
+
+                .icoBox {
+                    height: 20px;
+                    width: 20px;
+                    display: grid;
+                    place-items: center;
+                    border: 1px solid rgb(165, 165, 165);
+                    font-size: 14px;
+
+                }
+
+            }
+        }
+    }
+
+    .companyDiv {
+        margin-top: 20px;
+
+        .head {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+            padding-bottom: 13px;
+            // border-bottom: 1px solid #D1D1D1;
+        }
+
+        select {
+            width: 100%;
+            padding: 5px 10px;
+            border: 1px solid #D1D1D1;
+            outline: none;
+
+            option {
+                padding: 5px 10px;
+                background: $primary;
+                color: white;
+            }
+        }
+
+    }
+
+    .priceDiv {
+        margin-top: 20px;
+
+        .head {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+            padding-bottom: 13px;
+            // border-bottom: 1px solid #D1D1D1;
+        }
+
+        .value {
+            font-weight: 300;
+            font-size: 20px;
+        }
+
+        input {
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+            accent-color: $primary;
+            scale: 1;
+            transition: all .3s;
+            &:hover{
+                scale: 1.1;
+            }
+        }
+
+    }
+
+    .clearDiv {
+        margin-top: 40px;
+
+        .clrBtn {
+            border: none;
+            width: 180px;
+            background: $primary;
+            color: white;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            padding: 9px;
+            display: block;
+            margin: auto;
+            scale: 1;
+            transition: all .2s;
+
+            &:hover {
+                background: black;
+                color: white;
+                scale: 1.2;
+
+
+            }
+        }
+    }
+
+    .vievDiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .viewOpts {
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+
+            .box {
+                height: 26px;
+                width: 26px;
+                background: rgb(202, 202, 202);
+                display: grid;
+                place-items: center;
+                color: white;
+                transition: all .3s;
+
+                &.active {
+                    background: black;
+                }
+            }
+        }
+
+        select {
+            outline: none;
+            padding: 5px 10px;
+            border: 1px solid rgb(189, 189, 189);
+
+            option {
+                background: $primary;
+                color: white;
+            }
+        }
+    }
+
+    .productsDiv {
+        padding-top: 30px;
+
+        .product {
+            .imgBox {
+                border: 1px solid #D1D1D1;
+                padding: 33px 11px 11px 11px;
+                position: relative;
+
+                .productImg {
+                    aspect-ratio: 1;
+                    object-fit: contain;
+                }
+
+                .likeDivb {
+                    position: absolute;
+                    top: 11px;
+                    right: 11px;
+                    cursor: pointer;
+                    color: $primary;
+                }
+            }
+
+            .proName {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+                color: #000000;
+                margin-top: 14px;
+            }
+
+            .price {
+                margin-top: 13px;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 22px;
+                color: #000000;
+
+            }
+
+        }
+        .productListView{
+            display: flex;
+            align-items: flex-start;
+            column-gap: 30px;
+            .imgBox {
+                border: 1px solid #D1D1D1;
+                padding: 33px 11px 11px 11px;
+                position: relative;
+
+                .productImg {
+                    width: 200px;
+                    aspect-ratio: 1;
+                    object-fit: contain;
+                }
+
+                .likeDivb {
+                    position: absolute;
+                    top: 11px;
+                    right: 11px;
+                    cursor: pointer;
+                    color: $primary;
+                }
+            }
+            .content{
+                flex: 1;
+                .proName {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #000000;
+                    margin-top: 14px;
+                }
+    
+                .price {
+                    margin-top: 13px;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 22px;
+                    color: #000000;
+    
+                }
+
+            }
+        }
+    }
+}
+
+
+.catSticky{
+   position: sticky;
+   top: 50px;
+}
