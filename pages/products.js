@@ -37,14 +37,14 @@ export default function products() {
     const getAllProducts = async (signal) => {
         try {
             if (router.query.cat) {
-                const res = await fetch(`http://localhost:3000/api/products?cat=${router.query.cat}`, {
+                const res = await fetch(`https://bagfrontend.vercel.app/api/products?cat=${router.query.cat}`, {
                     signal: signal
                 })
                 const data = await res.json()
                 console.log('data>>>>cat', data)
                 setProductstState(data.data)
             } else {
-                const res = await fetch('http://localhost:3000/api/products', {
+                const res = await fetch('https://bagfrontend.vercel.app/api/products', {
                     signal: signal
                 })
                 const data = await res.json()
@@ -60,7 +60,7 @@ export default function products() {
         setAnime((state) => { !state })
         console.log(cat, "category")
 
-        const res = await fetch('http://localhost:3000/api/products')
+        const res = await fetch('https://bagfrontend.vercel.app/api/products')
         const data = await res.json()
         console.log('data>>>>', data)
 
@@ -75,7 +75,7 @@ export default function products() {
     }
 
     const clearFilter = async () => {
-        const res = await fetch('http://localhost:3000/api/products')
+        const res = await fetch('https://bagfrontend.vercel.app/api/products')
         const data = await res.json()
         setProductstState(data.data)
         setCurCat('')
@@ -84,7 +84,7 @@ export default function products() {
 
     const sortByPrice = async (val) => {
         console.log(val)
-        const res = await fetch(`http://localhost:3000/api/products?sort=${val}`)
+        const res = await fetch(`https://bagfrontend.vercel.app/api/products?sort=${val}`)
         const data = await res.json()
         console.log('sort data>>>>', data)
         setProductstState(data.data)
@@ -94,7 +94,7 @@ export default function products() {
 
     const filterByCompany = async (val)=>{
         console.log(val)
-        const res = await fetch(`http://localhost:3000/api/products?com=${val}`)
+        const res = await fetch(`https://bagfrontend.vercel.app/api/products?com=${val}`)
         const data = await res.json()
         console.log('company data>>>>', data)
         setProductstState(data.data)
@@ -103,7 +103,7 @@ export default function products() {
 
     const filterByPrice = async (val)=>{
         console.log(val)
-        const res = await fetch(`http://localhost:3000/api/products?price=${val}`)
+        const res = await fetch(`https://bagfrontend.vercel.app/api/products?price=${val}`)
         const data = await res.json()
         console.log('company data>>>>', data)
         setProductstState(data.data)
@@ -250,7 +250,7 @@ export default function products() {
                                                                     animate={anime ? 'rotate' : 'stop'}
                                                                 >
                                                                     <div className="imgBox">
-                                                                        <img src={`http://localhost:3000${product.productImgs[0]}`} alt="bag image" className="w-100 productImg" />
+                                                                        <img src={`https://bagfrontend.vercel.app${product.productImgs[0]}`} alt="bag image" className="w-100 productImg" />
                                                                         <div className="likeDivb">
                                                                             <FiHeart />
                                                                             {/* <BsFillHeartFill/> */}
@@ -275,7 +275,7 @@ export default function products() {
                                                                 >
 
                                                                     <div className="imgBox">
-                                                                        <img src={`http://localhost:3000${product.productImgs[0]}`} alt="bag image" className="productImg" />
+                                                                        <img src={`https://bagfrontend.vercel.app${product.productImgs[0]}`} alt="bag image" className="productImg" />
                                                                         <div className="likeDivb">
                                                                             <FiHeart />
                                                                             {/* <BsFillHeartFill/> */}
