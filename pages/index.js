@@ -9,7 +9,7 @@ import TopCategories from '../components/TopCategories'
 import { motion } from 'framer-motion';
 
 
-import { increment ,decrement } from '../app/slices/counterSlice'
+import { increment ,decrement } from '../store/slices/counterSlice'
 import { useSelector ,useDispatch } from 'react-redux'
 
 const inter = Inter({ subsets: ['latin'] })

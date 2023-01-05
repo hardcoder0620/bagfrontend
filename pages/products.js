@@ -6,9 +6,9 @@ import { FiGrid, FiHeart } from "react-icons/fi";
 import { BsFillHeartFill } from "react-icons/bs";
 
 import { motion, spring } from 'framer-motion';
+import Head from 'next/head';
 
 export default function products() {
-
 
     const router = useRouter()
     const [curPrice, setCurPrice] = useState(0)
@@ -115,6 +115,9 @@ export default function products() {
 
     return (
         <div style={{ overflow: 'hidden' }}>
+            <Head>
+                <title>Products page</title>
+            </Head>
 
             <motion.div
                 initial={{ opacity: 0, translateX: '-100%' }}

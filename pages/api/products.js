@@ -1,10 +1,10 @@
 import connectDb from "../../db/connectDb"
 import productScema from '../../models/products'
+import data from "../../data"
 
 export default async function handler(req, res) {
     try {
         await connectDb(process.env.mongo_uri)
-
         console.log(req.query, 'req.query')
         const queryObj = {}
         const sortObj = {}
@@ -15,9 +15,9 @@ export default async function handler(req, res) {
         if (cat) {
             queryObj.productCat = cat
         }
-        if (com) {
-            queryObj.productCompany = com
-        }
+        // if (com) {
+        //     queryObj.productCompany = com
+        // }
         if (price) {
             queryObj.productPrice = { "$lt": price }
         }
@@ -29,8 +29,10 @@ export default async function handler(req, res) {
                 sortObj.productPrice = -1
             }
         }
+        // await productScema.create(data)
+        // await productScema.deleteMany({},()=>{console.log('deleted')})
         const productsArr = await productScema.find(queryObj).sort(sortObj)
-        res.json({ "data": productsArr })
+        res.status(200).json({ "data": productsArr })
 
     } catch (error) {
         console.log('err', error)
