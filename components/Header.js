@@ -19,8 +19,7 @@ export default function Header() {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0 navList">
-                                {router.pathname != "/products"?
-                                <>
+                               
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         men
@@ -79,8 +78,7 @@ export default function Header() {
                                     <li><Link className="dropdown-item sub" href="/products?childCat=hats"> hats</Link></li>
                                     </ul>
                                 </li>
-                                </>
-                                :null}
+                               
                            
                             </ul>
                             <div className="likeCartPro">

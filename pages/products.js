@@ -34,7 +34,7 @@ export default function products() {
         return () => {
             controller.abort();
         }
-    }, [])
+    }, [router.query])
 
     const getAllProducts = async (signal) => {
         try {
