@@ -6,23 +6,30 @@ export default async function handler(req, res) {
     try {
         await connectDb(process.env.mongo_uri)
         console.log(req.query, 'req.query')
-        const queryObj = {}
+        let queryObj = {}
         const sortObj = {}
         const { cat } = req.query
+        const { subCat } = req.query
+        const { childCat } = req.query
         const { com } = req.query
         const { sort } = req.query
         const { price } = req.query
         if (cat) {
             queryObj.productCat = cat
         }
-        // if (com) {
-        //     queryObj.productCompany = com
-        // }
+        if (subCat) {
+            queryObj.productSubCat = subCat
+        }
+        if (childCat) {
+            queryObj.productChildCat = childCat
+        }
+      
         if (price) {
-            queryObj.productPrice = { "$lt": price }
+            queryObj.productPrice = { "$lt": price}
         }
         if (sort) {
             console.log(sort)
+            queryObj={}
             if (sort == 'lowToHigh') {
                 sortObj.productPrice = 1
             } else {

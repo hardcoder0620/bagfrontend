@@ -37,54 +37,55 @@ export default function TopCategories() {
                         >
                             <SwiperSlide>
                                 <div className="catBox">
-                                    <Link href={'/products?cat=bagpacks'} style={{ textDecoration: 'none' }}>
-                                        <img src="/images/bag1.jpg" alt="banner image" className="w-100 bannerImg" />
+                                    <Link href={'/products?cat=men'} style={{ textDecoration: 'none' }}>
+                                        <img src="/images/menformal2.webp" alt="banner image" className="w-100 bannerImg" />
                                         <div className="catName">
-                                            All backpacks 
+                                            Men
                                         </div>
                                     </Link>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="catBox">
-                                <Link href={'/products?cat=luggage'} style={{ textDecoration: 'none' }}>
-                                    <img src="/images/bag2.png" alt="banner image" className="w-100 bannerImg" />
+                                <Link href={'/products?cat=women'} style={{ textDecoration: 'none' }}>
+                                    <img src="/images/womenlehenga2.webp" alt="banner image" className="w-100 bannerImg" />
                                     <div className="catName">
-                                        Travel & Luggage 
+                                        Women
                                     </div>
                                     </Link>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="catBox">
-                                <Link href={'/products?cat=ladiesHandbag'} style={{ textDecoration: 'none' }}>
-                                    <img src="/images/bag3.png" alt="banner image" className="w-100 bannerImg" />
+                                <Link href={'/products?cat=kids'} style={{ textDecoration: 'none' }}>
+                                    <img src="/images/kidstshirt2.webp" alt="banner image" className="w-100 bannerImg" />
                                     <div className="catName">
-                                        Ladies Handbags 
+                                       Kids
                                     </div>
                                     </Link>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="catBox">
-                                <Link href={'/products?cat=travelAccessories'} style={{ textDecoration: 'none' }}>
-                                    <img src="/images/bag4.png" alt="banner image" className="w-100 bannerImg" />
+                                <Link href={'/products?cat=women'} style={{ textDecoration: 'none' }}>
+                                    <img src="/images/womenlehenga2.webp" alt="banner image" className="w-100 bannerImg" />
                                     <div className="catName">
-                                        Travel Accessories 
+                                        Women
                                     </div>
                                     </Link>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="catBox">
-                                    <Link href={'/products?cat=bagpacks'} style={{ textDecoration: 'none' }}>
-                                        <img src="/images/bag1.jpg" alt="banner image" className="w-100 bannerImg" />
+                                    <Link href={'/products?cat=men'} style={{ textDecoration: 'none' }}>
+                                        <img src="/images/menformal2.webp" alt="banner image" className="w-100 bannerImg" />
                                         <div className="catName">
-                                            All backpacks 
+                                            Men
                                         </div>
                                     </Link>
                                 </div>
                             </SwiperSlide>
+                           
 
                         </Swiper>
                         <div className="navBtns">

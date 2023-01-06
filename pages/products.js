@@ -13,9 +13,11 @@ export default function products() {
     const router = useRouter()
     const [curPrice, setCurPrice] = useState(0)
     const [curCat, setCurCat] = useState('')
+    const [curSubCat, setCurSubCat] = useState('')
     const [curView, setCurView] = useState('grid')
     const [productsState, setProductstState] = useState([])
     const [anime, setAnime] = useState(true)
+    const [filteredChildCat,setFilteredChildCat]=useState([])
 
 
     const variants = {
@@ -43,7 +45,23 @@ export default function products() {
                 const data = await res.json()
                 console.log('data>>>>cat', data)
                 setProductstState(data.data)
-            } else {
+            } else if (router.query.subCat) {
+                const res = await fetch(`https://bagfrontend.vercel.app/api/products?subCat=${router.query.subCat}`, {
+                    signal: signal
+                })
+                const data = await res.json()
+                console.log('data>>>>subCat', data)
+                setProductstState(data.data)
+
+            } else if (router.query.childCat) {
+                const res = await fetch(`https://bagfrontend.vercel.app/api/products?childCat=${router.query.childCat}`, {
+                    signal: signal
+                })
+                const data = await res.json()
+                console.log('data>>>>childCat', data)
+                setProductstState(data.data)
+            }
+            else {
                 const res = await fetch('https://bagfrontend.vercel.app/api/products', {
                     signal: signal
                 })
@@ -73,17 +91,37 @@ export default function products() {
 
 
     }
+    const filterBySubCat = async (subCat) => {
+
+        console.log(subCat, "subcategory")
+        const res = await fetch(`https://bagfrontend.vercel.app/api/products?subCat=${subCat}`)
+        const data = await res.json()
+        console.log('data>>>>subCat', data)
+        setProductstState(data.data)
+        setAnime((state) => { !state })
+
+        // setting child category
+        const childCatArr =  data.data.map((pro)=>{
+            return pro.productChildCat
+        })
+        const filteredChildCat =  [...new Set(childCatArr)];
+        console.log(filteredChildCat)
+        setFilteredChildCat(filteredChildCat)
+
+
+    }
 
     const clearFilter = async () => {
         const res = await fetch('https://bagfrontend.vercel.app/api/products')
         const data = await res.json()
         setProductstState(data.data)
-        setCurCat('')
+        setCurSubCat('')
         setAnime((state) => { !state })
     }
 
     const sortByPrice = async (val) => {
         console.log(val)
+        setCurSubCat('')
         const res = await fetch(`https://bagfrontend.vercel.app/api/products?sort=${val}`)
         const data = await res.json()
         console.log('sort data>>>>', data)
@@ -92,22 +130,28 @@ export default function products() {
 
     }
 
-    const filterByCompany = async (val)=>{
+    const filterByChildCat = async (val) => {
         console.log(val)
-        const res = await fetch(`https://bagfrontend.vercel.app/api/products?com=${val}`)
+        const res = await fetch(`https://bagfrontend.vercel.app/api/products?childCat=${val}`)
         const data = await res.json()
         console.log('company data>>>>', data)
         setProductstState(data.data)
         setAnime((state) => { !state })
     }
 
-    const filterByPrice = async (val)=>{
+    const filterByPrice = async (val) => {
         console.log(val)
-        const res = await fetch(`https://bagfrontend.vercel.app/api/products?price=${val}`)
+        setCurSubCat('')
+        const res = await fetch(`https://bagfrontend.vercel.app/api/products`)
         const data = await res.json()
-        console.log('company data>>>>', data)
-        setProductstState(data.data)
-        setAnime((state) => { !state })
+        const filterdData = data.data.filter((pro)=>{
+            const proPrice = Number(pro.productPrice)
+            const num = Number(val)
+            return (proPrice < num)
+        })
+        console.log(filterdData,'filterdData')
+        setProductstState(filterdData)
+        // setAnime((state) => { !state })
 
     }
 
@@ -133,85 +177,157 @@ export default function products() {
                                 <div className="leftSec">
                                     <div className="catDiv ">
                                         <div className="head" >
-                                            Categories
+                                            Categories 
                                         </div>
                                         <div className="options">
                                             <div className="option" onClick={() => {
-                                                setCurCat('Backpacks')
-                                                filterByCat('bagpacks')
+
+                                                setCurSubCat('topWear')
+                                                filterBySubCat('topWear')
                                             }}>
                                                 <div className="text " >
-                                                    Backpacks
+                                                    Top Wear
                                                 </div>
                                                 <div className="icoBox">
-                                                    {curCat == 'Backpacks' ? <FaCheck /> : null}
+                                                    {curSubCat == 'topWear' ? <FaCheck /> : null}
                                                 </div>
                                             </div>
-                                            <div className="option" onClick={() => {
-                                                setCurCat('Ladies Handbags')
-                                                filterByCat('ladiesHandbag')
 
-                                            }}>
-                                                <div className="text">
-                                                    Ladies Handbags
-                                                </div>
-                                                <div className="icoBox">
-                                                    {curCat == 'Ladies Handbags' ? <FaCheck /> : null}
-                                                </div>
-                                            </div>
                                             <div className="option" onClick={() => {
-                                                setCurCat('Luggage')
-                                                filterByCat('luggage')
+
+                                                setCurSubCat('bottomWear')
+                                                filterBySubCat('bottomWear')
                                             }}>
-                                                <div className="text">
-                                                    Luggage
+                                                <div className="text " >
+                                                    Bottom Wear
                                                 </div>
                                                 <div className="icoBox">
-                                                    {curCat == 'Luggage' ? <FaCheck /> : null}
+                                                    {curSubCat == 'bottomWear' ? <FaCheck /> : null}
                                                 </div>
                                             </div>
+
                                             <div className="option" onClick={() => {
-                                                setCurCat('travelAccessories')
-                                                filterByCat('travelAccessories')
+                                                setCurSubCat('footWear')
+                                                filterBySubCat('footWear')
                                             }}>
-                                                <div className="text">
-                                                    Travel Accessories
+                                                <div className="text " >
+                                                    Foot Wear
                                                 </div>
                                                 <div className="icoBox">
-                                                    {curCat == 'travelAccessories' ? <FaCheck /> : null}
+                                                    {curSubCat == 'footWear' ? <FaCheck /> : null}
                                                 </div>
                                             </div>
+
+                                            <div className="option" onClick={() => {
+                                                setCurSubCat('indianWear')
+                                                filterBySubCat('indianWear')
+                                            }}>
+                                                <div className="text " >
+                                                    Indian Wear
+                                                </div>
+                                                <div className="icoBox">
+                                                    {curSubCat == 'indianWear' ? <FaCheck /> : null}
+                                                </div>
+                                            </div>
+
+                                            <div className="option" onClick={() => {
+                                                setCurSubCat('beauty')
+                                                filterBySubCat('beauty')
+                                            }}>
+                                                <div className="text " >
+                                                    Beauty
+                                                </div>
+                                                <div className="icoBox">
+                                                    {curSubCat == 'beauty' ? <FaCheck /> : null}
+                                                </div>
+                                            </div>
+
+                                            <div className="option" onClick={() => {
+                                                setCurSubCat('womenFootWear')
+                                                filterBySubCat('womenFootWear')
+                                            }}>
+                                                <div className="text " >
+                                                    Women FootWear
+                                                </div>
+                                                <div className="icoBox">
+                                                    {curSubCat == 'womenFootWear' ? <FaCheck /> : null}
+                                                </div>
+                                            </div>
+
+                                            <div className="option" onClick={() => {
+                                                setCurSubCat('boysClothing')
+                                                filterBySubCat('boysClothing')
+                                            }}>
+                                                <div className="text " >
+                                                    Boys Clothing
+                                                </div>
+                                                <div className="icoBox">
+                                                    {curSubCat == 'boysClothing' ? <FaCheck /> : null}
+                                                </div>
+                                            </div>
+
+                                            <div className="option" onClick={() => {
+                                                setCurSubCat('girlsClothing')
+                                                filterBySubCat('girlsClothing')
+                                            }}>
+                                                <div className="text " >
+                                                    Girls Clothing
+                                                </div>
+                                                <div className="icoBox">
+                                                    {curSubCat == 'girlsClothing' ? <FaCheck /> : null}
+                                                </div>
+                                            </div>
+
+                                            <div className="option" onClick={() => {
+                                                setCurSubCat('accessories')
+                                                filterBySubCat('accessories')
+                                            }}>
+                                                <div className="text " >
+                                                    Accessories
+                                                </div>
+                                                <div className="icoBox">
+                                                    {curSubCat == 'accessories' ? <FaCheck /> : null}
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
+                                    {filteredChildCat.length > 0 ?
+                                    
                                     <div className="companyDiv">
-                                        <div className="head">Company</div>
-                                        <select name="" id="" onChange={(e)=>{
-                                            filterByCompany(e.target.value)
+                                        <div className="head">Sub categories</div>
+                                        <select name="" id="" onChange={(e) => {
+                                            filterByChildCat(e.target.value)
                                         }}>
-                                            <option value="">select company</option>
-                                            <option value="puma">puma</option>
-                                            <option value="skybags">skybags</option>
-                                            <option value="adidas">adidas</option>
-                                            <option value="safari">safari</option>
+                                            <option value="">Select Category</option>
+                                            {filteredChildCat.map((item,index)=>{
+                                                return(
+                                                    <option key={index} value={item}>{item.replace(/([A-Z])/g, " $1").toLowerCase()}</option>
+                                                )
+                                            })}
                                         </select>
                                     </div>
+
+                                    :null}
                                     <div className="priceDiv">
                                         <div className="head">
-                                            Price 
+                                            Price
                                         </div>
                                         <div className="value">
-                                            Rs {curPrice} 
+                                            Rs {curPrice}
                                         </div>
-                                        <input type="range" max="7000" min="1000" onChange={(e) => { 
-                                            setCurPrice(e.target.value) 
+                                        <input type="range"  min="100" max="1000" id="volume" name="volume" onChange={(e) => {
+                                            setCurPrice(e.target.value)
                                             filterByPrice(e.target.value)
-                                            }} />
+                                        }} />
+                                        
                                     </div>
                                     <div className="clearDiv">
                                         <button className="clrBtn" onClick={() => { clearFilter() }}>
-                                            Clear Filter 
+                                            Clear Filter
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
                             <div className="col-lg-9">

@@ -16,6 +16,7 @@ header {
                 font-size: 14px;
                 line-height: 22px;
                 color: #000000;
+                text-transform: capitalize;
 
                 &:hover {
                     color: $primary;
@@ -26,6 +27,29 @@ header {
 
 
                 }
+            }
+            .dropdown-menu{
+                background: $primary;
+                border-radius: 0px;
+                padding: 5px;
+                .dropdown-item{
+                    color: white;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    &.sub{
+                        padding-left: 30px;
+                        font-size: 14px;
+                    }
+                    &:hover{
+                        // background: $primary;
+                        color: black;
+                    }
+                    &:active{
+                        background: $primary;
+                        color: white;
+                    }
+                }
+
             }
         }
 
@@ -90,6 +114,10 @@ header {
     .catCarousel {
         padding-top: 112px;
         position: relative;
+        .bannerImg{
+            aspect-ratio: 1;
+            object-fit: contain;
+        }
 
 
         .catName {
@@ -99,6 +127,7 @@ header {
             font-size: 22px;
             line-height: 30px;
             color: #000000;
+            text-align: center;
         }
 
         .navBtns {

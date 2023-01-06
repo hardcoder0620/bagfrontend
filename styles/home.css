@@ -10,9 +10,31 @@ header .navBar .navList .nav-link {
   font-size: 14px;
   line-height: 22px;
   color: #000000;
+  text-transform: capitalize;
 }
 header .navBar .navList .nav-link:hover {
   color: #F47B20;
+}
+header .navBar .navList .dropdown-menu {
+  background: #F47B20;
+  border-radius: 0px;
+  padding: 5px;
+}
+header .navBar .navList .dropdown-menu .dropdown-item {
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+header .navBar .navList .dropdown-menu .dropdown-item.sub {
+  padding-left: 30px;
+  font-size: 14px;
+}
+header .navBar .navList .dropdown-menu .dropdown-item:hover {
+  color: black;
+}
+header .navBar .navList .dropdown-menu .dropdown-item:active {
+  background: #F47B20;
+  color: white;
 }
 header .navBar .likeCartPro {
   display: flex;
@@ -63,6 +85,11 @@ header .navBar .likeCartPro .iconBox span {
   padding-top: 112px;
   position: relative;
 }
+.shopTopCatDiv .catCarousel .bannerImg {
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .shopTopCatDiv .catCarousel .catName {
   margin-top: 20px;
   font-style: normal;
@@ -70,6 +97,7 @@ header .navBar .likeCartPro .iconBox span {
   font-size: 22px;
   line-height: 30px;
   color: #000000;
+  text-align: center;
 }
 .shopTopCatDiv .catCarousel .navBtns {
   display: flex;
