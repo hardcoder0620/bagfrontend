@@ -11,6 +11,27 @@ const data = [
         productColor: "blue"
     },
     {
+        productName: "multi-varient product",
+        productImgs: ["/images/mentshirt1.jpeg","img2"],
+        productPrice: "349",
+        productDesc: "desc",
+        productQty: "20",
+        productCat: "men",
+        productSubCat: "topWear",
+        productChildCat: "tshirts",
+        productColor: "blue",
+        varients:[
+            {
+                size:'S',
+                colors:[{color:'red',price:'200'},{color:'black',price:'300'}]
+            },
+            {
+                size:'M',
+                colors:[{color:'green',price:'400'},{color:'blue',price:'500'}]
+            }
+        ]
+    },
+    {
         productName: "Men Printed Hooded Neck Red T-Shirt",
         productImgs: ["/images/mentshirt2.webp","img2"],
         productPrice: "299",

@@ -1,3 +1,7 @@
+.linkTag {
+  text-decoration: none;
+}
+
 header {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -345,8 +349,138 @@ header .navBar .likeCartPro .iconBox span {
   color: #000000;
 }
 
-.catSticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 50px;
+.singleProMain {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.singleProMain .porImgsSec .mainImg img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 1;
+}
+.singleProMain .proDescMain .name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
+}
+.singleProMain .proDescMain .desc {
+  margin-top: 13px;
+}
+.singleProMain .proDescMain .price {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000000;
+  margin-top: 18px;
+}
+.singleProMain .proDescMain .sizes {
+  bottom: 1px solid grey;
+  padding-top: 18px;
+}
+.singleProMain .proDescMain .sizes .had {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+.singleProMain .proDescMain .sizes .size {
+  height: 45px;
+  width: 45px;
+  background: #D1D1D1;
+  color: white;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.singleProMain .proDescMain .sizes .size.active {
+  background: #F47B20;
+}
+.singleProMain .proDescMain .colors {
+  margin-top: 22px;
+}
+.singleProMain .proDescMain .colors .had {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+.singleProMain .proDescMain .colors .color {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.singleProMain .proDescMain .colors .color.active {
+  outline: 1px solid #F47B20;
+  outline-offset: 2px;
+}
+.singleProMain .proDescMain .qtySelector {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.singleProMain .proDescMain .qtySelector .head {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+.singleProMain .proDescMain .qtySelector select {
+  outline: none;
+  border-radius: 0px;
+  padding: 5px 8px;
+}
+.singleProMain .proDescMain .qtySelector select option {
+  background: #F47B20;
+  color: white;
+}
+.singleProMain .proDescMain .cartWish {
+  margin-top: 47px;
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.singleProMain .proDescMain .cartWish .cart {
+  border: none;
+  width: 180px;
+  padding: 14px;
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  background: #F47B20;
+}
+.singleProMain .proDescMain .cartWish .wish {
+  border: 1px solid #000000;
+  padding: 14px;
+  color: #000000;
+  width: 180px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  background: white;
+  font-weight: 700;
 }/*# sourceMappingURL=home.css.map */

@@ -3,8 +3,10 @@ import { FaRegHeart, FaShoppingCart, FaRegUser } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useSelector,useDispatch } from 'react-redux';
 
 export default function Header() {
+    const cartArr = useSelector((state)=>state.cartReducer)
     const router = useRouter()
     return (
         <>
@@ -90,7 +92,7 @@ export default function Header() {
                                 <div className="iconBox">
                                     <AiOutlineShoppingCart color='black' size={22} />
                                     <span>
-                                        2
+                                        {cartArr.length}
                                     </span>
                                 </div>
                                 <div className="iconBox">

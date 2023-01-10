@@ -35,7 +35,12 @@ const productSchema = new mongoose.Schema({
     productColor: {
         type: String,
         required: true
+    },
+    varients:{
+        type: Array,
+        required:false,
+        default:[]
     }
 })
-const model = mongoose.models.product || mongoose.model('product', productSchema)
-export default model
+ 
+export default mongoose.models.product || mongoose.model('product', productSchema)
