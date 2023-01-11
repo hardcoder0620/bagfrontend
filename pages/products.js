@@ -370,7 +370,7 @@ export default function products() {
                                                                     animate={anime ? 'rotate' : 'stop'}
                                                                 >
                                                                     <Link href={`/singleProduct?productId=${product._id}`} className="linkTag">
-                                                                        <div>go to</div>
+                                                                      
                                                                     <div className="imgBox">
                                                                         <img src={`https://bagfrontend.vercel.app${product.productImgs[0]}`} alt="bag image" className="w-100 productImg" />
                                                                         <div className="likeDivb">
@@ -378,9 +378,9 @@ export default function products() {
                                                                             {/* <BsFillHeartFill/> */}
                                                                         </div>
                                                                     </div>
-                                                                    <div className="proName">
+                                                                    {/* <div className="proName">
                                                                         {product.productName}
-                                                                    </div>
+                                                                    </div> */}
                                                                     <div className="price">
                                                                         Rs. {product.productPrice}
                                                                     </div>
