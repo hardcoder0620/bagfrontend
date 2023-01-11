@@ -378,9 +378,9 @@ export default function products() {
                                                                             {/* <BsFillHeartFill/> */}
                                                                         </div>
                                                                     </div>
-                                                                    {/* <div className="proName">
+                                                                    <div className="proName">
                                                                         {product.productName}
-                                                                    </div> */}
+                                                                    </div>
                                                                     <div className="price">
                                                                         Rs. {product.productPrice}
                                                                     </div>
