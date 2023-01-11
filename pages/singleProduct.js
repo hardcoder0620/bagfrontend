@@ -8,7 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Magnifier from "react-magnifier";
-import ReactImageMagnify from 'react-image-magnify';
+
 
 export default function singleProduct({ data }) {
     const [singPro, setSingPro] = useState('')
