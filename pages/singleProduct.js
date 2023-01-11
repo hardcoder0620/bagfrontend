@@ -110,6 +110,7 @@ export default function singleProduct({ data }) {
                                     {singPro ?
                                         <div className="mainImg" >
                                             {/* <Magnifier src={singPro.productImgs[0]} mgWidth={250} mgHeight={250} /> */}
+                                            <img src={singPro.productImgs[0]} alt="" />
                                         </div>
                                         : null}
                                 </div>
