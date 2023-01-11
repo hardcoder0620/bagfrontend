@@ -7,7 +7,7 @@ import { addToCart } from '../store/slices/cartSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Magnifier from "react-magnifier";
+// import Magnifier from "react-magnifier";
 
 
 export default function singleProduct({ data }) {
@@ -109,7 +109,7 @@ export default function singleProduct({ data }) {
                                 <div className="porImgsSec" ref={imgBoxRef}>
                                     {singPro ?
                                         <div className="mainImg" >
-                                            <Magnifier src={singPro.productImgs[0]} mgWidth={250} mgHeight={250} />
+                                            {/* <Magnifier src={singPro.productImgs[0]} mgWidth={250} mgHeight={250} /> */}
                                         </div>
                                         : null}
                                 </div>
