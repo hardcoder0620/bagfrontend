@@ -370,6 +370,7 @@ export default function products() {
                                                                     animate={anime ? 'rotate' : 'stop'}
                                                                 >
                                                                     <Link href={`/singleProduct?productId=${product._id}`} className="linkTag">
+                                                                        <a>go to</a>
                                                                     <div className="imgBox">
                                                                         <img src={`https://bagfrontend.vercel.app${product.productImgs[0]}`} alt="bag image" className="w-100 productImg" />
                                                                         <div className="likeDivb">
