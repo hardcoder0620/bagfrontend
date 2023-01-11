@@ -89,12 +89,12 @@ export default function Header() {
                                         <FaRegHeart color='black' size={20} />
                                     </div>
                                 </Link>
-                                <div className="iconBox">
+                                <Link href={'/cart'} className="iconBox">
                                     <AiOutlineShoppingCart color='black' size={22} />
                                     <span>
                                         {cartArr.length}
                                     </span>
-                                </div>
+                                </Link>
                                 <div className="iconBox">
                                     <FaRegUser color='black' size={20} />
                                 </div>

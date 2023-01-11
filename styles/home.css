@@ -483,4 +483,238 @@ header .navBar .likeCartPro .iconBox span {
   line-height: 22px;
   background: white;
   font-weight: 700;
+}
+
+.cartSectionMain {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.cartSectionMain .heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
+  margin-bottom: 27px;
+}
+.cartSectionMain .leftSec .itemBox {
+  display: flex;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid grey;
+}
+.cartSectionMain .leftSec .itemBox .proImg {
+  width: 180px;
+  border: 1px solid grey;
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 10px;
+}
+.cartSectionMain .leftSec .itemBox .pcontent {
+  flex: 1;
+  padding-left: 30px;
+  position: relative;
+}
+.cartSectionMain .leftSec .itemBox .pcontent .name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+.cartSectionMain .leftSec .itemBox .pcontent .size, .cartSectionMain .leftSec .itemBox .pcontent .color {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+.cartSectionMain .leftSec .itemBox .pcontent .price {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+}
+.cartSectionMain .leftSec .itemBox .pcontent .remove {
+  position: absolute;
+  bottom: 0px;
+  right: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(255, 71, 71);
+  cursor: pointer;
+}
+.cartSectionMain .leftSec .itemBox .pcontent .qtySelect {
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+.cartSectionMain .leftSec .itemBox .pcontent .qtySelect .head {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+.cartSectionMain .leftSec .itemBox .pcontent .qtySelect select {
+  padding: 0px 5px;
+  border-radius: 0px;
+  outline: none;
+}
+.cartSectionMain .leftSec .itemBox .pcontent .qtySelect select option {
+  background: #F47B20;
+  color: white;
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox {
+  background: white;
+  border: 1px solid rgb(206, 206, 206);
+  padding: 20px;
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .head {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .yogaPlan {
+  margin-top: 11px;
+  font-weight: 600;
+  color: #F47B20;
+  letter-spacing: 0.48px;
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .droDiv {
+  padding-top: 20px;
+}
+@media screen and (max-width: 570px) {
+  .cartSectionMain .rightSec .orderWrapper .orderBox .droDiv {
+    padding-top: 10px;
+  }
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .droDiv .chDropMain {
+  position: relative;
+  background: #E2D7C6;
+  width: 109px;
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .droDiv .chDropMain .seleDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .droDiv .chDropMain .seleDiv .seleText {
+  font-weight: 500;
+  font-size: 16px;
+  color: #3D4039;
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .droDiv .chDropMain .seleDiv .iconn {
+  font-size: 16px;
+  color: #3D4039;
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .droDiv .chDropMain .selOptions {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 34px;
+  right: 0px;
+  background: #E2D7C6;
+  z-index: 2;
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .droDiv .chDropMain .selOptions .opt {
+  font-weight: 500;
+  font-size: 16px;
+  color: #3D4039;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .divider {
+  margin-top: 20px;
+  border-bottom: 1px dashed #F47B20;
+}
+@media screen and (max-width: 570px) {
+  .cartSectionMain .rightSec .orderWrapper .orderBox .divider {
+    margin-top: 10px;
+  }
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .itemRow {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 570px) {
+  .cartSectionMain .rightSec .orderWrapper .orderBox .itemRow {
+    margin-top: 10px;
+  }
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .itemRow .textl,
+.cartSectionMain .rightSec .orderWrapper .orderBox .itemRow .textr {
+  font-weight: 500;
+  font-size: 16px;
+  color: #3D4039;
+}
+@media screen and (max-width: 570px) {
+  .cartSectionMain .rightSec .orderWrapper .orderBox .itemRow .textl,
+.cartSectionMain .rightSec .orderWrapper .orderBox .itemRow .textr {
+    font-size: 14px;
+  }
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .boldRow {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 570px) {
+  .cartSectionMain .rightSec .orderWrapper .orderBox .boldRow {
+    margin-top: 10px;
+  }
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .boldRow .Textl {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+}
+@media screen and (max-width: 570px) {
+  .cartSectionMain .rightSec .orderWrapper .orderBox .boldRow .Textl {
+    font-size: 14px;
+  }
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .boldRow .Textr {
+  font-size: 23px;
+  color: #F47B20;
+  letter-spacing: 0.69px;
+}
+@media screen and (max-width: 570px) {
+  .cartSectionMain .rightSec .orderWrapper .orderBox .boldRow .Textr {
+    font-size: 18px;
+  }
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .PayNow {
+  display: block;
+  margin-top: 40px;
+  width: 100%;
+  background: #FCD406;
+  border: none;
+  padding: 9px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3D4039;
+  letter-spacing: 0.48px;
+}
+@media screen and (max-width: 570px) {
+  .cartSectionMain .rightSec .orderWrapper .orderBox .PayNow {
+    margin-top: 20px;
+  }
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .PayNow .iconn {
+  margin-left: 5px;
+  transition: all 0.2s;
+}
+.cartSectionMain .rightSec .orderWrapper .orderBox .PayNow:hover .iconn {
+  margin-left: 10px;
 }/*# sourceMappingURL=home.css.map */
