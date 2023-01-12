@@ -96,7 +96,9 @@ export default function Header() {
                                     </span>
                                 </Link>
                                 <div className="iconBox">
+                                    <Link href={'/login'} >
                                     <FaRegUser color='black' size={20} />
+                                    </Link>
                                 </div>
                             </div>
 

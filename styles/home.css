@@ -523,7 +523,8 @@ header .navBar .likeCartPro .iconBox span {
   line-height: 22px;
   color: #000000;
 }
-.cartSectionMain .leftSec .itemBox .pcontent .size, .cartSectionMain .leftSec .itemBox .pcontent .color {
+.cartSectionMain .leftSec .itemBox .pcontent .size,
+.cartSectionMain .leftSec .itemBox .pcontent .color {
   margin-top: 10px;
   font-style: normal;
   font-weight: 700;
@@ -717,4 +718,79 @@ header .navBar .likeCartPro .iconBox span {
 }
 .cartSectionMain .rightSec .orderWrapper .orderBox .PayNow:hover .iconn {
   margin-left: 10px;
+}
+
+.loginMainSec {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.loginMainSec .heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
+.loginMainSec .formSec {
+  padding-top: 30px;
+}
+.loginMainSec .formSec .actualForm input {
+  border: 0.5px solid #929292;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 6px 14px;
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  outline: none;
+}
+.loginMainSec .formSec .actualForm input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #929292;
+  line-height: 22px;
+}
+.loginMainSec .formSec .actualForm input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #929292;
+  line-height: 22px;
+}
+.loginMainSec .formSec .actualForm input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #929292;
+  line-height: 22px;
+}
+.loginMainSec .formSec .actualForm button {
+  background: #F47B20;
+  padding: 10px;
+  width: 300px;
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  display: block;
+  margin: auto;
+}
+.loginMainSec .formSec .actualForm .create {
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  margin-top: 50px;
+}
+.loginMainSec .formSec .actualForm .create a {
+  color: #F47B20;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  padding-left: 10px;
 }/*# sourceMappingURL=home.css.map */

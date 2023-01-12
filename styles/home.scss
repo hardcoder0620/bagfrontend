@@ -611,6 +611,7 @@ header {
         margin-bottom: 27px;
 
     }
+
     .leftSec {
         .itemBox {
             display: flex;
@@ -631,7 +632,7 @@ header {
                 flex: 1;
                 padding-left: 30px;
                 position: relative;
-               
+
                 .name {
                     font-style: normal;
                     font-weight: 700;
@@ -640,7 +641,8 @@ header {
                     color: #000000;
                 }
 
-                .size,.color {
+                .size,
+                .color {
                     margin-top: 10px;
                     font-style: normal;
                     font-weight: 700;
@@ -648,7 +650,8 @@ header {
                     line-height: 20px;
                     color: #000000;
                 }
-                .price{
+
+                .price {
                     margin-top: 10px;
                     font-style: normal;
                     font-weight: 700;
@@ -656,7 +659,8 @@ header {
                     line-height: 20px;
                     color: #000000;
                 }
-                .remove{
+
+                .remove {
                     position: absolute;
                     bottom: 0px;
                     right: 30px;
@@ -665,23 +669,27 @@ header {
                     color: rgb(255, 71, 71);
                     cursor: pointer;
                 }
-                .qtySelect{
+
+                .qtySelect {
                     column-gap: 10px;
                     margin-top: 10px;
                     align-items: center;
-                    .head{
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 20px;
-                    color: #000000;
+
+                    .head {
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #000000;
 
                     }
-                    select{
+
+                    select {
                         padding: 0px 5px;
                         border-radius: 0px;
                         outline: none;
-                        option{
+
+                        option {
                             background: $primary;
                             color: white;
                         }
@@ -690,7 +698,8 @@ header {
             }
         }
     }
-    .rightSec{
+
+    .rightSec {
         .orderWrapper {
             .orderBox {
                 background: white;
@@ -698,7 +707,7 @@ header {
                 padding: 20px;
 
                 .head {
-                   
+
                     font-weight: 500;
                     font-size: 16px;
                     color: #000000;
@@ -707,7 +716,7 @@ header {
 
                 .yogaPlan {
                     margin-top: 11px;
-                  
+
                     font-weight: 600;
                     color: $primary;
                     letter-spacing: 0.48px;
@@ -735,7 +744,7 @@ header {
                             cursor: pointer;
 
                             .seleText {
-                              
+
                                 font-weight: 500;
                                 font-size: 16px;
                                 color: #3D4039;
@@ -758,7 +767,7 @@ header {
                             z-index: 2;
 
                             .opt {
-                              
+
                                 font-weight: 500;
                                 font-size: 16px;
                                 color: #3D4039;
@@ -793,7 +802,7 @@ header {
 
                     .textl,
                     .textr {
-                       
+
                         font-weight: 500;
                         font-size: 16px;
                         color: #3D4039;
@@ -817,7 +826,7 @@ header {
                     }
 
                     .Textl {
-                      
+
                         font-weight: 600;
                         font-size: 16px;
                         color: #000000;
@@ -829,7 +838,7 @@ header {
                     }
 
                     .Textr {
-                       
+
                         font-size: 23px;
                         color: $primary;
                         letter-spacing: 0.69px;
@@ -848,7 +857,7 @@ header {
                     background: #FCD406;
                     border: none;
                     padding: 9px;
-                  
+
                     font-size: 16px;
                     font-weight: 500;
                     color: #3D4039;
@@ -874,4 +883,77 @@ header {
         }
     }
 
+}
+
+// loginMainSec
+.loginMainSec {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .heading {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        text-align: center;
+        color: #000000;
+    }
+
+    .formSec {
+        padding-top: 30px;
+
+        .actualForm {
+            input {
+                border: 0.5px solid #929292;
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 6px 14px;
+                color: #000000;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                outline: none;
+
+                &::placeholder {
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #929292;
+                    line-height: 22px;
+                }
+            }
+
+            button {
+                background: $primary;
+                padding: 10px;
+                width: 300px;
+                border: none;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+                color: #FFFFFF;
+                display: block;
+                margin: auto;
+
+            }
+
+            .create {
+                text-align: center;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 22px;
+                color: #000000;
+                margin-top: 50px;
+                a{
+                    color: $primary;
+                    font-weight: 700;
+                    font-size: 16px;
+                    text-decoration: none;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
 }
