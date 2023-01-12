@@ -198,7 +198,7 @@ export default function singleProduct({ data }) {
 }
 
 export const getServerSideProps = async (ctx) => {
-    const res = await fetch(`https://bagfrontend.vercel.app/api/getProduct?productId=${ctx.query.productId}`)
+    const res = await fetch(`http://localhost:3000/api/getProduct?productId=${ctx.query.productId}`)
     const data = await res.json()
     return {
         props: {

@@ -12,7 +12,6 @@ export default function login() {
               exit={{ opacity: 0, translateX: '-100%' }}
               transition={{ type: 'spring', stiffness: 60 }}
             >
-
             <Header />
             <div className="loginMainSec">
                 <div className="container">
@@ -21,7 +20,6 @@ export default function login() {
                     <div className="row">
                         <div className="col-4 mx-auto">
                             <div className="actualForm">
-                               
                                 <input type="text" className='inField'  name="" id="" placeholder=' Email Id'/>
                                 <input type="text" className='inField'  name="" id="" placeholder='Enter Password'/>
                                 <button>Log in</button>
@@ -32,11 +30,8 @@ export default function login() {
                         </div>
                     </div>
                 </div>
-
                 </div>
             </div>
-
-           
             </motion.div>
         </div>
     )

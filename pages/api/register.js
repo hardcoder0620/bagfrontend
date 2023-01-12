@@ -14,7 +14,7 @@ export default async function handler(req, res) {
 
             const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
 
-            res.json({message:'success',token,data:{userName:user.userName,userEmail:user.userEmail}})
+            res.json({message:'success',token,data:{userId:user._id,userName:user.userName,userEmail:user.userEmail}})
 
         }else{
             res.json({message:'failed'})
