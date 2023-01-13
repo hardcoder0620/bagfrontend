@@ -793,4 +793,23 @@ header .navBar .likeCartPro .iconBox span {
   font-size: 16px;
   text-decoration: none;
   padding-left: 10px;
+}
+
+.profileMainSec {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.profileMainSec .wel {
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+}
+.profileMainSec button.lgout {
+  border: none;
+  background: #F47B20;
+  color: white;
+  font-size: 18px;
+  font-weight: 18px;
+  width: 300px;
+  padding: 10px;
 }/*# sourceMappingURL=home.css.map */

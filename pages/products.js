@@ -40,32 +40,32 @@ export default function products() {
     const getAllProducts = async (signal) => {
         try {
             if (router.query.cat) {
-                const res = await fetch(`http://localhost:3000/api/products?cat=${router.query.cat}`, {
+                const res = await fetch(`https://bagfrontend.vercel.app/api/products?cat=${router.query.cat}`, {
                     signal: signal
-                })
+                }) 
                 const data = await res.json()
                 console.log('data>>>>cat', data)
                 setProductstState(data.data)
             } else if (router.query.subCat) {
-                const res = await fetch(`http://localhost:3000/api/products?subCat=${router.query.subCat}`, {
+                const res = await fetch(`https://bagfrontend.vercel.app/api/products?subCat=${router.query.subCat}`, {
                     signal: signal
-                })
+                }) 
                 const data = await res.json()
                 console.log('data>>>>subCat', data)
                 setProductstState(data.data)
 
             } else if (router.query.childCat) {
-                const res = await fetch(`http://localhost:3000/api/products?childCat=${router.query.childCat}`, {
+                const res = await fetch(`https://bagfrontend.vercel.app/api/products?childCat=${router.query.childCat}`, {
                     signal: signal
-                })
+                }) 
                 const data = await res.json()
                 console.log('data>>>>childCat', data)
                 setProductstState(data.data)
             }
             else {
-                const res = await fetch('http://localhost:3000/api/products', {
+                const res = await fetch('https://bagfrontend.vercel.app/api/products', {
                     signal: signal
-                })
+                }) 
                 const data = await res.json()
                 console.log('data>>>>', data)
                 setProductstState(data.data)
@@ -79,7 +79,7 @@ export default function products() {
         setAnime((state) => { !state })
         console.log(cat, "category")
 
-        const res = await fetch('http://localhost:3000/api/products')
+        const res = await fetch('https://bagfrontend.vercel.app/api/products')
         const data = await res.json()
         console.log('data>>>>', data)
 
@@ -95,7 +95,7 @@ export default function products() {
     const filterBySubCat = async (subCat) => {
 
         console.log(subCat, "subcategory")
-        const res = await fetch(`http://localhost:3000/api/products?subCat=${subCat}`)
+        const res = await fetch(`https://bagfrontend.vercel.app/api/products?subCat=${subCat}`)
         const data = await res.json()
         console.log('data>>>>subCat', data)
         setProductstState(data.data)
@@ -113,7 +113,7 @@ export default function products() {
     }
 
     const clearFilter = async () => {
-        const res = await fetch('http://localhost:3000/api/products')
+        const res = await fetch('https://bagfrontend.vercel.app/api/products')
         const data = await res.json()
         setProductstState(data.data)
         setCurSubCat('')
@@ -123,7 +123,7 @@ export default function products() {
     const sortByPrice = async (val) => {
         console.log(val)
         setCurSubCat('')
-        const res = await fetch(`http://localhost:3000/api/products?sort=${val}`)
+        const res = await fetch(`https://bagfrontend.vercel.app/api/products?sort=${val}`)
         const data = await res.json()
         console.log('sort data>>>>', data)
         setProductstState(data.data)
@@ -133,7 +133,7 @@ export default function products() {
 
     const filterByChildCat = async (val) => {
         console.log(val)
-        const res = await fetch(`http://localhost:3000/api/products?childCat=${val}`)
+        const res = await fetch(`https://bagfrontend.vercel.app/api/products?childCat=${val}`)
         const data = await res.json()
         console.log('company data>>>>', data)
         setProductstState(data.data)
@@ -143,7 +143,7 @@ export default function products() {
     const filterByPrice = async (val) => {
         console.log(val)
         setCurSubCat('')
-        const res = await fetch(`http://localhost:3000/api/products`)
+        const res = await fetch(`https://bagfrontend.vercel.app/api/products`)
         const data = await res.json()
         const filterdData = data.data.filter((pro)=>{
             const proPrice = Number(pro.productPrice)
@@ -372,7 +372,7 @@ export default function products() {
                                                                     <Link href={`/singleProduct?productId=${product._id}`} className="linkTag">
                                                                       
                                                                     <div className="imgBox">
-                                                                        <img src={`http://localhost:3000${product.productImgs[0]}`} alt="bag image" className="w-100 productImg" />
+                                                                        <img src={`https://bagfrontend.vercel.app${product.productImgs[0]}`} alt="bag image" className="w-100 productImg" />
                                                                         <div className="likeDivb">
                                                                             <FiHeart />
                                                                             {/* <BsFillHeartFill/> */}
@@ -398,7 +398,7 @@ export default function products() {
                                                                 >
 
                                                                     <div className="imgBox">
-                                                                        <img src={`http://localhost:3000${product.productImgs[0]}`} alt="bag image" className="productImg" />
+                                                                        <img src={`https://bagfrontend.vercel.app${product.productImgs[0]}`} alt="bag image" className="productImg" />
                                                                         <div className="likeDivb">
                                                                             <FiHeart />
                                                                             {/* <BsFillHeartFill/> */}

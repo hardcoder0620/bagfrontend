@@ -4,17 +4,24 @@ import { motion, spring } from 'framer-motion';
 import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/router';
+import { useDispatch ,useSelector } from 'react-redux';
+import { setUser } from '../store/slices/userSlice';
 
 export default function signup() {
-  const [userName,setUserName]= useState('')
-  const [userPass,setUserPass]= useState('')
-  const [userMail,setUserMail]= useState('')
+  const [userName, setUserName] = useState('')
+  const [userPass, setUserPass] = useState('')
+  const [userMail, setUserMail] = useState('')
+
+  const router = useRouter()
+  const dispatch = useDispatch()
 
 
 
 
-  async function createUserFn(){
-    if(!userMail || !userName || !userPass){
+
+  async function createUserFn() {
+    if (!userMail || !userName || !userPass) {
       toast.error('fill all the fields', {
         position: "top-center",
         autoClose: 5000,
@@ -24,21 +31,29 @@ export default function signup() {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        });
+      });
       return
     }
-    const res = await fetch(`http://localhost:3000/api/register`,{
-      method:'POST',
-      headers:{
-        "Content-Type":"application/json"
+    const res = await fetch(`https://bagfrontend.vercel.app/api/register`, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
       },
-      body:JSON.stringify({"userName":userName,"userPass":userPass,"userEmail":userMail})
+      body: JSON.stringify({ "userName": userName, "userPass": userPass, "userEmail": userMail })
     })
     const data = await res.json()
     console.warn(data)
-    if(data.message == "success"){
-      localStorage.setItem('token',data.token)
-      localStorage.setItem('userId',data.data.userId)
+    if (data.message == "success") {
+      localStorage.setItem('token', data.token)
+      localStorage.setItem('userId', data.data.userId)
+      localStorage.setItem('userName', data.data.userName)
+
+      dispatch(setUser({
+        userName: data.data.userName,
+        token: data.token,
+        userId: data.data.userId
+      }))
+
       toast.success('Account created successfully', {
         position: "top-center",
         autoClose: 5000,
@@ -48,8 +63,13 @@ export default function signup() {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        });
-    }else{
+      });
+
+      setTimeout(() => {
+        router.push('/')
+      }, 2000);
+
+    } else {
       toast.error('failed', {
         position: "top-center",
         autoClose: 5000,
@@ -68,7 +88,7 @@ export default function signup() {
 
   return (
     <div style={{ overflow: 'hidden' }}>
-      <ToastContainer/>
+      <ToastContainer />
       <motion.div className=""
         initial={{ opacity: 0, translateX: '-100%' }}
         animate={{ opacity: 1, translateX: '0%' }}
@@ -82,12 +102,12 @@ export default function signup() {
             <div className="heading">Create new account </div>
             <div className="formSec">
               <div className="row">
-                <div className="col-4 mx-auto">
+                <div className="col-md-4 mx-auto">
                   <div className="actualForm">
-                    <input type="text"  value={userName} onChange={(e)=>setUserName(e.target.value)} className='inField' name="" id="" placeholder='Your Name' />
-                    <input type="text"  value={userMail} onChange={(e)=>setUserMail(e.target.value)} className='inField' name="" id="" placeholder='Email Id' />
-                    <input type="text"  value={userPass} onChange={(e)=>setUserPass(e.target.value)} className='inField' name="" id="" placeholder='Enter Password' />
-                    <button onClick={()=>{
+                    <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} className='inField' name="" id="" placeholder='Your Name' />
+                    <input type="text" value={userMail} onChange={(e) => setUserMail(e.target.value)} className='inField' name="" id="" placeholder='Email Id' />
+                    <input type="text" value={userPass} onChange={(e) => setUserPass(e.target.value)} className='inField' name="" id="" placeholder='Enter Password' />
+                    <button onClick={() => {
                       createUserFn()
                     }}>Register</button>
                     <div className="create">

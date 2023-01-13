@@ -11,9 +11,7 @@ export default async function handler(req, res) {
             const {userName,userPass,userEmail} = req.body
             const hashedPassword = await bcrypt.hash(userPass, 10)
             const user = await userSchema.create({userName,userPass:hashedPassword,userEmail})
-
             const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
-
             res.json({message:'success',token,data:{userId:user._id,userName:user.userName,userEmail:user.userEmail}})
 
         }else{

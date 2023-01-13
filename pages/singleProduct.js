@@ -110,7 +110,7 @@ export default function singleProduct({ data }) {
                                     {singPro ?
                                         <div className="mainImg" >
                                             {/* <Magnifier src={singPro.productImgs[0]} mgWidth={250} mgHeight={250} /> */}
-                                            <img src={singPro.productImgs[0]} alt="" />
+                                            <img src={singPro.productImgs[0]} className={'w-100'} alt="product main image" />
                                         </div>
                                         : null}
                                 </div>
@@ -198,7 +198,7 @@ export default function singleProduct({ data }) {
 }
 
 export const getServerSideProps = async (ctx) => {
-    const res = await fetch(`http://localhost:3000/api/getProduct?productId=${ctx.query.productId}`)
+    const res = await fetch(`https://bagfrontend.vercel.app/api/getProduct?productId=${ctx.query.productId}`)
     const data = await res.json()
     return {
         props: {

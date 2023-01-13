@@ -8,6 +8,17 @@ import { useSelector,useDispatch } from 'react-redux';
 export default function Header() {
     const cartArr = useSelector((state)=>state.cartReducer)
     const router = useRouter()
+
+    function goToLogin(){
+        const token = localStorage.getItem('token')
+        if(token){
+            router.push('/profile')
+        }else{
+            router.push('/login')
+        }
+
+    }
+
     return (
         <>
             <header>
@@ -96,9 +107,9 @@ export default function Header() {
                                     </span>
                                 </Link>
                                 <div className="iconBox">
-                                    <Link href={'/login'} >
+                                    <div onClick={()=>{goToLogin()}} style={{cursor:'pointer'}}>
                                     <FaRegUser color='black' size={20} />
-                                    </Link>
+                                    </div>
                                 </div>
                             </div>
 
